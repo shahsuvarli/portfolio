@@ -1,9 +1,7 @@
 import React from "react";
 import profile from "../assets/images/profile.jpeg";
 import "../styles/profile.css";
-import { BsGithub, BsTwitter } from "react-icons/bs";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FiInstagram } from "react-icons/fi";
+import { socials } from "../assets/json/socials";
 
 function Profile() {
   return (
@@ -11,18 +9,13 @@ function Profile() {
       <img src={profile} className="profile-img" alt="hey" />
       <span className="header-text">Hey, I am Elvin!</span>
       <ul className="social-icons">
-        <li className="social-icon">
-          <FaLinkedinIn size={50} color="white" />
-        </li>
-        <li className="social-icon">
-          <BsGithub size={50} color="white" />
-        </li>
-        <li className="social-icon">
-          <BsTwitter size={50} color="white" />
-        </li>
-        <li className="social-icon">
-          <FiInstagram size={50} color="white" />
-        </li>
+        {socials.map((social) => {
+          return (
+            <li>
+              <a href={social.link}>{social.img}</a>
+            </li>
+          );
+        })}
       </ul>
     </header>
   );
