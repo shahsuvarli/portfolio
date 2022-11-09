@@ -24,10 +24,10 @@ export const socials = [
     img: <FiInstagram size={size} color={color} />,
     link: "https://www.instagram.com/shahsuvarli_/",
   },
-  {
-    id: 3,
-    name: "Twitter",
-    img: <BsTwitter size={size} color={color} />,
-    link: "https://twitter.com/EShahsuvarli",
-  },
+  // {
+  //   id: 3,
+  //   name: "Twitter",
+  //   img: <BsTwitter size={size} color={color} />,
+  //   link: "https://twitter.com/EShahsuvarli",
+  // },
 ];
