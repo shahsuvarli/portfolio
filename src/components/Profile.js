@@ -2,6 +2,7 @@ import React from "react";
 import profile from "../assets/images/profile.jpeg";
 import "../styles/profile.css";
 import { socials } from "../assets/json/socials";
+import SocialIcon from "./SocialIcon";
 
 function Profile() {
   return (
@@ -10,11 +11,7 @@ function Profile() {
       <span className="header-text">Hey, I am Elvin!</span>
       <ul className="social-icons">
         {socials.map((social) => {
-          return (
-            <li>
-              <a href={social.link}>{social.img}</a>
-            </li>
-          );
+          return <SocialIcon social={social} key={social.id} />;
         })}
       </ul>
     </header>
