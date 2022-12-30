@@ -1,0 +1,11 @@
+@import url(snowball.css);
+
+.snow-container {
+  /* background-color: rgba(240, 235, 244, 0.3); */
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
