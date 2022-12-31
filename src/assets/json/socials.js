@@ -3,7 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 
 const size = 50;
-const color = "beige";
+const color = "snow";
 
 export const socials = [
   {

@@ -4,10 +4,18 @@ import { socials } from "../assets/json/socials";
 import SocialIcon from "./SocialIcon";
 
 function Profile() {
-  const message = "Hey, I am Elvin";
+  const message = "Happy New Year!";
   return (
     <header className="profile-container">
-      <img draggable={false} src={profile} className="profile-img" alt="hey" />
+      <div className="my-ball">
+        <img
+          draggable={false}
+          src={profile}
+          className="profile-img"
+          alt="hey"
+        />
+        <hr />
+      </div>
       <span className="header-text">
         {message.split("").map((letter, index) => (
           <span key={index} id={`letter-${index}`} className="letter">

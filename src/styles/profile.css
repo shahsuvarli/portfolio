@@ -1,12 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
+
 .profile-container {
-  width: 500px;
-  height: 300px;
+  /* height: 300px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   border-radius: 5px;
   position: absolute;
+  gap: 50px;
+}
+
+@keyframes rolling {
+  0% {
+    /* transform: rotate(0deg) translate(0,0); */
+  }
+  25% {
+    transform: rotate(-30deg) translate(40px, 0);
+  }
+  75% {
+    transform: rotate(30deg) translate(-40px, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+}
+
+.my-ball {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rolling 5s ease-in-out infinite;
+}
+
+.my-ball > hr {
+  border: 1px solid rgba(255, 250, 250, 0.54);
+  transform: rotate(90deg);
+  position: absolute;
+  width: 130px;
+  margin-bottom: 50px;
 }
 
 .profile-img {
@@ -16,6 +48,7 @@
   box-shadow: 0 0 0px 5px rgba(224, 220, 220, 0.5);
   background-color: rebeccapurple;
   transition: all 0.5s ease-in-out;
+  z-index: 3;
 }
 
 img:hover {
@@ -27,12 +60,13 @@ img:hover {
   font-weight: 200;
   font-size: 40px;
   color: beige;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   display: flex;
   justify-content: center;
   align-items: center;
   width: 300px;
   height: 100px;
+  font-family: "Rubik Bubbles", cursive;
 }
 
 .social-icons {
@@ -40,9 +74,9 @@ img:hover {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: 330px;
+  width: 300px;
   padding: 0;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .social-icons > li {
@@ -54,8 +88,9 @@ img:hover {
 .letter {
   display: inline-block;
   transition: all 1s ease-in-out;
-  margin: 0 2px;
-  font-weight: 300;
+  margin: 0 3px;
+  color: snow;
+  font-size: 30px;
 }
 
 .letter:hover {
@@ -63,10 +98,6 @@ img:hover {
   transform: rotate(360deg);
 }
 
-#letter-7:hover {
+/* #letter-7:hover {
   text-transform: uppercase;
-}
-
-#letter-8:hover {
-  transform: rotate(180deg);
-}
+} */

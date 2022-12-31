@@ -3,9 +3,8 @@ import AcUnitIcon from "@mui/icons-material/AcUnit";
 
 function SnowBall() {
   return (
-    <div className="ball-container">
-      <AcUnitIcon />
-    </div>
+    // <div className="ball-container">
+    <AcUnitIcon className="ball-container" />
   );
 }
 

@@ -1,16 +1,14 @@
 @keyframes snowing {
-  from {
-    bottom: 100%;
+  0% {
+    transform: translate(0px, 10px);
   }
-  to {
-    bottom: 0;
+  100% {
+    transform: translate(0px, 440px);
+    opacity: 0.3;
   }
 }
 
 .ball-container {
-  animation: snowing 10s ease-in-out infinite;
-  color: white;
-  position: absolute;
-  bottom: 10px;
-  transform: rotate(180deg);
+  color: #d2eceb;
+  height: auto !important;
 }
