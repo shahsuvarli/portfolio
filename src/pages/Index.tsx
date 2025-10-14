@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, FileText, Code2, Briefcase } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Code2, Briefcase, Mail, Phone, Linkedin, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -38,9 +38,12 @@ const Index = () => {
         <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-5"></div>
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              Analytics Engineer
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              Elvin Shahsuvarli
             </h1>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+              Analytics Engineer
+            </h2>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Transforming data into insights. Building scalable analytics platforms and empowering teams with reliable, accessible data.
             </p>
@@ -53,6 +56,34 @@ const Index = () => {
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link to="/articles">Read Articles</Link>
+              </Button>
+            </div>
+
+            {/* Contact Icons */}
+            <div className="flex gap-4 justify-center mt-8 flex-wrap">
+              <Button variant="outline" size="lg" asChild>
+                <a href="mailto:elvin@example.com">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Email
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <a href="tel:+1234567890">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Phone
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://linkedin.com/in/elvinshahsuvarli" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="mr-2 h-5 w-5" />
+                  LinkedIn
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <a href="/resume.pdf" download>
+                  <Download className="mr-2 h-5 w-5" />
+                  Resume
+                </a>
               </Button>
             </div>
           </div>
