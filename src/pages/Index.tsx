@@ -41,9 +41,12 @@ const Index = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               Elvin Shahsuvarli
             </h1>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-foreground">
-              Analytics Engineer
+            <h2 className="text-3xl md:text-4xl font-semibold mb-2 text-foreground">
+              Analytics Engineer at Xebia
             </h2>
+            <p className="text-lg md:text-xl text-muted-foreground mb-6">
+              Rotterdam, Netherlands
+            </p>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Transforming data into insights. Building scalable analytics platforms and empowering teams with reliable, accessible data.
             </p>
