@@ -7,7 +7,9 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Books from "./pages/Books";
+import BookDetail from "./pages/BookDetail";
 import Articles from "./pages/Articles";
+import ArticleDetail from "./pages/ArticleDetail";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
@@ -24,7 +26,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/books" element={<Books />} />
+          <Route path="/books/:id" element={<BookDetail />} />
           <Route path="/articles" element={<Articles />} />
+          <Route path="/articles/:id" element={<ArticleDetail />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

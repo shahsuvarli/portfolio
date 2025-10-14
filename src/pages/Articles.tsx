@@ -1,28 +1,32 @@
 import { Calendar, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const articles = [
   {
-    title: "Building Modern Data Pipelines with dbt",
-    date: "2024-03-15",
+    id: "data-quality-framework",
+    title: "Building a Scalable Data Quality Framework",
+    date: "2024-01-15",
     readTime: "8 min read",
-    tags: ["dbt", "Data Engineering", "Analytics"],
-    excerpt: "A comprehensive guide to implementing analytics engineering best practices using dbt and modern data stack tools.",
+    tags: ["Data Quality", "Analytics", "Best Practices"],
+    excerpt: "Learn how to implement automated data quality checks that scale with your organization.",
   },
   {
-    title: "Optimizing SQL Queries at Scale",
-    date: "2024-02-20",
+    id: "dbt-best-practices",
+    title: "dbt Best Practices for Analytics Engineering",
+    date: "2023-12-10",
+    readTime: "10 min read",
+    tags: ["dbt", "SQL", "Data Modeling"],
+    excerpt: "Essential patterns and practices for maintaining clean, tested, and documented dbt projects.",
+  },
+  {
+    id: "modern-data-stack",
+    title: "Navigating the Modern Data Stack",
+    date: "2023-11-22",
     readTime: "12 min read",
-    tags: ["SQL", "Performance", "Optimization"],
-    excerpt: "Techniques and strategies for improving query performance in large-scale analytical databases.",
-  },
-  {
-    title: "The Future of Analytics Engineering",
-    date: "2024-01-10",
-    readTime: "6 min read",
-    tags: ["Analytics", "Career", "Industry Trends"],
-    excerpt: "Exploring emerging trends and technologies shaping the analytics engineering landscape.",
+    tags: ["Data Stack", "Tools", "Architecture"],
+    excerpt: "A comprehensive guide to choosing the right tools for your data infrastructure.",
   },
 ];
 
@@ -42,40 +46,39 @@ const Articles = () => {
 
           <div className="grid gap-6 animate-slide-in">
             {articles.map((article, index) => (
-              <Card
-                key={index}
-                className="shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-              >
-                <CardHeader>
-                  <div className="flex items-start justify-between gap-4 mb-2">
-                    <CardTitle className="text-2xl">{article.title}</CardTitle>
-                  </div>
-                  <CardDescription className="flex items-center gap-4 text-sm">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      {new Date(article.date).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      })}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      {article.readTime}
-                    </span>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">{article.excerpt}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {article.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="secondary">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <Link key={article.id} to={`/articles/${article.id}`}>
+                <Card className="shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1 cursor-pointer hover:border-primary/50">
+                  <CardHeader>
+                    <div className="flex items-start justify-between gap-4 mb-2">
+                      <CardTitle className="text-2xl">{article.title}</CardTitle>
+                    </div>
+                    <CardDescription className="flex items-center gap-4 text-sm">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="h-4 w-4" />
+                        {new Date(article.date).toLocaleDateString('en-US', { 
+                          year: 'numeric', 
+                          month: 'long', 
+                          day: 'numeric' 
+                        })}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="h-4 w-4" />
+                        {article.readTime}
+                      </span>
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">{article.excerpt}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {article.tags.map((tag, tagIndex) => (
+                        <Badge key={tagIndex} variant="secondary">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
