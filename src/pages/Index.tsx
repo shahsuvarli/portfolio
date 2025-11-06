@@ -65,25 +65,25 @@ const Index = () => {
             {/* Contact Icons */}
             <div className="flex gap-4 justify-center mt-8 flex-wrap">
               <Button variant="outline" size="lg" asChild>
-                <a href="mailto:elvin@example.com">
+                <a href="mailto:shahsuvarli.elvin@gmail.com">
                   <Mail className="mr-2 h-5 w-5" />
                   Email
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="tel:+1234567890">
+                <a href="tel:+36202484628">
                   <Phone className="mr-2 h-5 w-5" />
                   Phone
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="https://linkedin.com/in/elvinshahsuvarli" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/shahsuvarli" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="mr-2 h-5 w-5" />
                   LinkedIn
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="/resume.pdf" download>
+                <a href="https://drive.google.com/file/d/1b0YbXL1u25iAtNjtFVan53-CuieJtYqA/view?usp=share_link" target="_blank" download>
                   <Download className="mr-2 h-5 w-5" />
                   Resume
                 </a>
@@ -129,17 +129,17 @@ const Index = () => {
               </CardHeader>
               <CardContent className="space-y-4 text-muted-foreground">
                 <p>
-                  I'm an analytics engineer passionate about building reliable data infrastructure 
-                  and empowering teams with trustworthy insights. With expertise in modern data stack 
+                  I'm an analytics engineer passionate about building reliable data infrastructure
+                  and empowering teams with trustworthy insights. With expertise in modern data stack
                   tools and best practices, I focus on creating scalable, maintainable analytics solutions.
                 </p>
                 <p>
-                  My work spans the entire analytics lifecycle—from data modeling and pipeline 
-                  orchestration to visualization and stakeholder collaboration. I believe in the 
+                  My work spans the entire analytics lifecycle—from data modeling and pipeline
+                  orchestration to visualization and stakeholder collaboration. I believe in the
                   power of well-architected data systems to drive informed decision-making.
                 </p>
                 <p>
-                  When I'm not working with data, you'll find me reading technical books, 
+                  When I'm not working with data, you'll find me reading technical books,
                   writing about analytics engineering, or exploring new tools in the modern data ecosystem.
                 </p>
               </CardContent>
